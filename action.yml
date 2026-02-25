@@ -1,0 +1,12 @@
+name: "Parity Test Action"
+description: "A demo composite action for parity testing"
+inputs:
+  name:
+    description: "Name to greet"
+    required: false
+    default: "World"
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Hello, ${{ inputs.name }}!"
+      shell: bash
